@@ -3,17 +3,72 @@
 {% block content %}
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
-</div>
+    <div class="row justify-content-center">
+        <div class="col-sm-4">
 
+            <div class="money-management">
+                <!-- Capital -->
+                <label for="CapitalFormControlInput1">Capital:</label>
+                <input type="number" class="form-control" placeholder="Capital">
+
+                <!-- Risk/reward-->
+                <label for="CapitalFormControlInput1">Risk/Reward</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="RISK" value="1" readonly="">
+                    <input type="text" class="form-control" placeholder="REWARD">
+                </div>
+
+                <!-- Risk -->
+                <label for="CapitalFormControlInput1">Risk</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="%" value="2">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">%</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="money" readonly="" >
+            
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">$$</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Price -->
+            <label for="CapitalFormControlInput1">Price:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="buy price">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">$$</span>
+                </div>
+            </div>
+            
+            <!-- Stop Loss -->
+            <label for="CapitalFormControlInput1">SL</label>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="%">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">%</span>
+                </div>
+                <input type="text" class="form-control" placeholder="SL price">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">$$</span>
+                </div>
+            </div>
+            
+            <!-- Take profit -->
+            <label for="CapitalFormControlInput1">TP</label>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="%">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">%</span>
+                </div>
+                <input type="text" class="form-control" placeholder="TP price">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">$$</span>
+                </div>
+            </div>		
+        </div>
+    </div>	
+
+</div>
 {% endblock %}
