@@ -12,7 +12,7 @@
 						<!-- 1st row CAPITAL -->
 						<label for="CapitalFormControlInput1">Capital:</label>
 						<div class="input-group">
-							<input type="number" class="form-control" placeholder="Capital" id="capital" onkeyup="calculateSizeOfPosition();">
+							<input type="number" class="form-control" placeholder="Capital" id="capital">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
@@ -21,11 +21,11 @@
 
 						<label for="CapitalFormControlInput1">Risk</label>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="%" id="risk_percent" value="2" onkeyup="calculateSizeOfPosition();">
+							<input type="number" class="form-control" placeholder="%" id="risk_percent" value="2">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">%</span>
 							</div>
-							<input type="text" class="form-control" placeholder="money" id="risk_money" onkeyup="calculateSizeOfPosition();">
+							<input type="number" class="form-control" placeholder="money" id="risk_money" readonly>
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
@@ -36,8 +36,8 @@
 						<div class="input-group">
 						<div class="input-group-prepend">
 						</div>
-						<input type="text" class="form-control" placeholder="RISK" id="risk" value="1" readonly="">
-						<input type="text" class="form-control" placeholder="REWARD" id="reward" value="3" onkeyup="calculateSizeOfPosition();">
+						<input type="number" class="form-control" placeholder="RISK" id="risk" value="1" readonly>
+						<input type="number" class="form-control" placeholder="REWARD" id="reward" value="3" >
 						</div>
 					</fieldset>
 				</div>
@@ -51,7 +51,7 @@
 						<legend>Position:</legend>
 						<label for="CapitalFormControlInput1">Price:</label>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="buy price" id="price" onkeyup="calculateSizeOfPosition();">
+							<input type="number" class="form-control" placeholder="buy price" id="price">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
@@ -60,25 +60,25 @@
 						<!-- 5rd SL -->
 						<label for="CapitalFormControlInput1">SL</label>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="%" id="sl_percent" onkeyup="calculateSizeOfPosition();">
-							<div class="input-group-append">
-								<span class="input-group-text" id="basic-addon2">%</span>
-							</div>
-							<input type="text" class="form-control" placeholder="SL price" id="sl_money" readonly>
+							<input type="number" class="form-control" placeholder="SL price" id="sl_money">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
+							</div>
+							<input type="number" class="form-control" placeholder="%" id="sl_percent" readonly>
+							<div class="input-group-append">
+								<span class="input-group-text" id="basic-addon2">%</span>
 							</div>
 						</div>
 						<!-- 5rd TP -->
 						<label for="CapitalFormControlInput1">TP</label>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="%" id="tp_percent" onkeyup="calculateSizeOfPosition();">
-							<div class="input-group-append">
-								<span class="input-group-text" id="basic-addon2">%</span>
-							</div>
-							<input type="text" class="form-control" placeholder="TP price" rid="tp_money" readonly>
+							<input type="number" class="form-control" placeholder="TP price" id="tp_money">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
+							</div>
+							<input type="number" class="form-control" placeholder="%" id="tp_percent" readonly>
+							<div class="input-group-append">
+								<span class="input-group-text" id="basic-addon2">%</span>
 							</div>
 						</div>
 					</fieldset>		  	
@@ -93,11 +93,11 @@
 						<legend>Calculations:</legend>
 						<label for="CapitalFormControlInput1">Amount to buy:</label>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="amount" id="amount" readonly>
+							<input type="number" class="form-control" placeholder="amount" id="amount" readonly>
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">qty</span>
 							</div>
-							<input type="text" class="form-control" placeholder="TP price" id="amount_money" readonly>
+							<input type="number" class="form-control" placeholder="amount money" id="amount_money" readonly>
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
@@ -105,7 +105,7 @@
 						<!-- 5rd SL -->
 						<label for="CapitalFormControlInput1">Max. loss</label>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="$$" id="max_loss" readonly>
+							<input type="number" class="form-control" placeholder="$$" id="max_loss" readonly>
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
@@ -113,7 +113,7 @@
 						<!-- 5rd TP -->
 						<label for="CapitalFormControlInput1">Max. profit</label>
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="$$" id="max_profit" readonly>
+							<input type="number" class="form-control" placeholder="$$" id="max_profit" readonly>
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
