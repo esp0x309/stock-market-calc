@@ -12,7 +12,7 @@
 						<!-- 1st row CAPITAL -->
 						<label for="CapitalFormControlInput1">Capital:</label>
 						<div class="input-group">
-							<input type="number" class="form-control" placeholder="Capital" id="capital">
+							<input type="number" class="form-control" placeholder="Capital" id="capital" step="0.01">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
@@ -21,7 +21,7 @@
 
 						<label for="CapitalFormControlInput1">Risk</label>
 						<div class="input-group">
-							<input type="number" class="form-control" placeholder="%" id="risk_percent" value="2">
+							<input type="number" class="form-control" placeholder="%" id="risk_percent" value="2" step="1">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">%</span>
 							</div>
@@ -51,32 +51,32 @@
 						<legend>Position:</legend>
 						<label for="CapitalFormControlInput1">Price:</label>
 						<div class="input-group">
-							<input type="number" class="form-control" placeholder="buy price" id="price">
+							<input type="number" class="form-control" placeholder="buy price" id="price" value="12">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
 						</div>
 
-						<!-- 5rd SL -->
-						<label for="CapitalFormControlInput1">SL</label>
-						<div class="input-group">
-							<input type="number" class="form-control" placeholder="SL price" id="sl_money">
-							<div class="input-group-append">
-								<span class="input-group-text" id="basic-addon2">$$</span>
-							</div>
-							<input type="number" class="form-control" placeholder="%" id="sl_percent" readonly>
-							<div class="input-group-append">
-								<span class="input-group-text" id="basic-addon2">%</span>
-							</div>
-						</div>
 						<!-- 5rd TP -->
 						<label for="CapitalFormControlInput1">TP</label>
 						<div class="input-group">
-							<input type="number" class="form-control" placeholder="TP price" id="tp_money" readonly>
+							<input type="number" class="form-control" placeholder="TP price" id="tp_money" value="16">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">$$</span>
 							</div>
 							<input type="number" class="form-control" placeholder="%" id="tp_percent" readonly>
+							<div class="input-group-append">
+								<span class="input-group-text" id="basic-addon2">%</span>
+							</div>
+						</div>
+						<!-- 6rd SL -->
+						<label for="CapitalFormControlInput1">SL</label>
+						<div class="input-group">
+							<input type="number" class="form-control" placeholder="SL price" id="sl_money" value="10">
+							<div class="input-group-append">
+								<span class="input-group-text" id="basic-addon2">$$</span>
+							</div>
+							<input type="number" class="form-control" placeholder="%" id="sl_percent" readonly step="0.01">
 							<div class="input-group-append">
 								<span class="input-group-text" id="basic-addon2">%</span>
 							</div>

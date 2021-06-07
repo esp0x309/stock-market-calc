@@ -8,16 +8,27 @@ $(document).ready(function() {
         $("#risk_money").val(risk_money);
 
         // Position
+
         var price = $("#price").val();
-        // sl
-        var sl_money = $("#sl_money").val();
-        var sl_percent = ((price - sl_money)/price) * 100;
-        $("#sl_percent").val(sl_percent);
-        // tp
-        var tp_percent = sl_percent * reward;
+        var tp_money = $("#tp_money").val();
+        var tp_percent = (((tp_money - price)/price) * 100).toFixed(3);
         $("#tp_percent").val(tp_percent);
 
-        var tp_money = parseFloat(price) + (price * tp_percent/100);
-        $("#tp_money").val(tp_money);
+        var sl_percent = (tp_percent/reward).toFixed(3);
+        var sl_money = (price - (price * (sl_percent/100))).toFixed(2);
+        $("#sl_percent").val(sl_percent);
+        $("#sl_money").val(sl_money);
+
+        // Calculations
+
+        var amount = Math.floor(((risk_money * (100/sl_percent))/price));
+        var amount_money = amount * price;// 
+        var max_loss = (amount_money * sl_percent/100).toFixed(2);
+        var max_profit = (amount_money * tp_percent/100).toFixed(2);
+        $("#amount").val(amount)
+        $("#amount_money").val(amount_money);
+        $("#max_loss").val(max_loss);
+        $("#max_profit").val(max_profit);
+
     });
 });
